@@ -3,7 +3,7 @@ name: Deploy Markmaps to GitHub Pages
 on:
   push:
     branches:
-      - main # Dispara a action sempre que houver um push na branch main
+      - mindmaps # Dispara a action sempre que houver um push na branch main
   workflow_dispatch: # Permite disparar o deploy manualmente na aba Actions do GitHub
 
 # Permissões necessárias para fazer o deploy no GitHub Pages
