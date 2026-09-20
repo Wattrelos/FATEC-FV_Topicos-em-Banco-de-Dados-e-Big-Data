@@ -75,7 +75,7 @@ jobs:
               </div>
               <div class='arrow'>→</div>
             </a>
-            CARD
+          CARD
           done
 
           # Carrega os cards gerados
