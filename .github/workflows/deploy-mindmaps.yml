@@ -37,8 +37,8 @@ jobs:
           # Instala o markmap-cli globalmente
           npm install -g markmap-cli
 
-          # Variável para armazenar os cards HTML
-          LINKS_HTML=""
+          # Arquivo temporário para armazenar os cards HTML
+          > cards.html
 
           # Processa exclusivamente os arquivos markdown dentro de mapas-mentais/
           find mapas-mentais/ -maxdepth 2 -type f -name "*.md" | sort | while IFS= read -r file; do
@@ -61,7 +61,7 @@ jobs:
             fi
 
             # Constrói o card do mapa mental
-            LINKS_HTML="$LINKS_HTML
+            cat <<CARD >> cards.html
             <a class='card' href='$filename.html'>
               <div class='icon-wrapper'>
                 <span class='icon'>🗺️</span>
@@ -74,8 +74,13 @@ jobs:
                 <p class='filepath'>Origem: <code>$file</code></p>
               </div>
               <div class='arrow'>→</div>
-            </a>"
+            </a>
+CARD
           done
+
+          # Carrega os cards gerados
+          LINKS_HTML=$(cat cards.html)
+          rm -f cards.html
 
           # Cria a página inicial dist/index.html com visual moderno e responsivo
           cat <<EOF > dist/index.html
