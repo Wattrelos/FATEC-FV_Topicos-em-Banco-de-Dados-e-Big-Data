@@ -2,7 +2,7 @@
 
 # Mapas Mentais - Tópicos em Banco de Dados e Big Data
 
-> O mapa mental foi elaborado, estruturado e consolidado no arquivo [topicos.md](mapas-mentais/topicos.md) no formato **Markmap**.
+> O mapa mental foi elaborado, estruturado e consolidado no arquivo [Mapas mentais](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/) no formato **Markmap**.
 
 ### 🌟 O que foi organizado e integrado:
 
