@@ -22,15 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+      # GitHub Actions começou a descontinuar o Node.js 20 para a execução interna das Actions. actions/checkout@v4 para @v4.2.2 (ou superior): Garante que a execução interna da action use o ambiente atualizado
+        uses: actions/checkout@v4.2.2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        # actions/setup-node@v4 para @v4.2.0 (ou superior): Atualiza a lógica interna para evitar o aviso de depreciação do Node 20.
+        uses: actions/setup-node@v4.2.0
         with:
           node-version: 24
 
       - name: Create Build Directory
         run: mkdir -p dist
+
 
       - name: Compile Markmaps to HTML and Generate Portal
         run: |
