@@ -3,7 +3,7 @@
 # Mapas Mentais - Tópicos em Banco de Dados e Big Data
 
 > O mapa mental foi elaborado, estruturado e consolidado no arquivo [Mapas mentais](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/) no formato **Markmap**.
-> 📖 Confira também o tutorial completo: [Como gerar e publicar Mapas Mentais com IA e GitHub Actions](file:///home/wattrelos/Documentos/Fatec/Tópicos em Bancos de Dados e Big Data/gerando-mapas-mentais.md).
+> 📖 Confira também o tutorial completo: [Como gerar e publicar Mapas Mentais com IA e GitHub Actions](/gerando-mapas-mentais.md).
 
 ### 🌟 O que foi organizado e integrado:
 
@@ -44,4 +44,4 @@
    - **Validação de Esquema e Ferramentas**: Document Validator (`$jsonSchema`, `required`, `bsonType`), MongoDB Compass e MongoDB Atlas.
 
 ---
-💡 *Você pode visualizar o mapa interativo abrindo o arquivo [topicos.md](file:///home/wattrelos/Documentos/Fatec/Tópicos em Bancos de Dados e Big Data/mapas-mentais/topicos.md) e utilizando a extensão Markmap do seu editor.*
+💡 *Você pode visualizar o mapa interativo abrindo o arquivo [topicos.md](/mapas-mentais/topicos.md) e utilizando a extensão Markmap do seu editor.*
