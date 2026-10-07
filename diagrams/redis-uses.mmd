@@ -1,0 +1,49 @@
+graph TD
+    %% Estilo Global
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef main fill:#d41414,stroke:#a00d0d,stroke-width:2px,color:#fff;
+    classDef struct fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
+    classDef usecase fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+
+    %% Nós Principais
+    Redis[Redis Data Architectures]:::main
+
+    %% Estruturas do Redis
+    Str["Strings + TTL (SET NX EX / INCR)"]:::struct
+    Hash[Hashes with Expire]:::struct
+    Sets[Sets]:::struct
+    Lists[Lists & Streams]:::struct
+    ZSet[Sorted Sets - ZSet]:::struct
+    PubSub[Pub/Sub System]:::struct
+
+    %% Casos de Uso
+    Cache[Cache]:::usecase
+    Rate[API Rate Limiting]:::usecase
+    Idem[Idempotency & Distributed Locks]:::usecase
+    Token[Session Tokens]:::usecase
+    Ctrl[Session Control]:::usecase
+    Sess[Session Management]:::usecase
+    Broker[Message Brokers & Queues]:::usecase
+    Leader[Real-time Leaderboards]:::usecase
+    Chat[Live Chats & Notifications]:::usecase
+
+    %% Conexões
+    Redis --> Str
+    Redis --> Hash
+    Redis --> Sets
+    Redis --> Lists
+    Redis --> ZSet
+    Redis --> PubSub
+
+    Str --> Cache
+    Str --> Rate
+    Str --> Idem
+    Str --> Token
+    Hash --> Cache
+    Hash --> Sess
+    Sets --> Ctrl
+    Lists --> Broker
+    ZSet --> Leader
+    ZSet --> Rate
+    PubSub --> Chat
+    Lists --> Chat

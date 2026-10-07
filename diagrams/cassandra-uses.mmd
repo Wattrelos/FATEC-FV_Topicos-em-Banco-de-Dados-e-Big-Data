@@ -1,0 +1,59 @@
+graph TD
+    %% Estilo Global
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef main fill:#1287b1,stroke:#0b5c7a,stroke-width:2px,color:#fff;
+    classDef struct fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
+    classDef usecase fill:#e8f5e9,stroke:#388e3c,stroke-width:2px;
+
+    %% Nó Principal
+    Cass[Apache Cassandra Data Modeling]:::main
+
+    %% Recursos do Cassandra
+    PK["Partition Key + Bucket"]:::struct
+    CK["Clustering Columns (ORDER BY DESC)"]:::struct
+    TTL["TTL + TWCS"]:::struct
+    TU[timeuuid]:::struct
+    Col["Collections (set / list / map)"]:::struct
+    Cnt[Counter Type]:::struct
+    LWT["Lightweight Transactions (IF NOT EXISTS)"]:::struct
+    Rep["NetworkTopologyStrategy + Tunable Consistency"]:::struct
+
+    %% Casos de Uso
+    IoT[Time Series & IoT]:::usecase
+    Chat[Chat Message History]:::usecase
+    Feed[Social Feeds & Timelines]:::usecase
+    Prof[User Profiles & Personalization]:::usecase
+    Logs[Logs, Events & Audit]:::usecase
+    Fraud[Fraud Detection]:::usecase
+    Track[Real-time Tracking]:::usecase
+    Count[Distributed Counters]:::usecase
+    Uniq[Uniqueness / Idempotency]:::usecase
+    Multi[Multi-Region High Availability]:::usecase
+
+    %% Conexões
+    Cass --> PK
+    Cass --> CK
+    Cass --> TTL
+    Cass --> TU
+    Cass --> Col
+    Cass --> Cnt
+    Cass --> LWT
+    Cass --> Rep
+
+    PK --> IoT
+    PK --> Logs
+    CK --> IoT
+    CK --> Fraud
+    CK --> Track
+    CK --> Feed
+    TTL --> IoT
+    TTL --> Logs
+    TTL --> Fraud
+    TU --> Chat
+    TU --> Feed
+    TU --> Logs
+    Col --> Prof
+    Cnt --> Count
+    LWT --> Uniq
+    Rep --> Multi
+    Rep --> Prof
