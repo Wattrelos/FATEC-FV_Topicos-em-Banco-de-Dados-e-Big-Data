@@ -1,14 +1,53 @@
-
+<div align="center">
 
 # Mapas Mentais - Tópicos em Banco de Dados e Big Data
+
+[![Deploy Markmaps](https://github.com/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/actions/workflows/deploy-mindmaps.yml/badge.svg?branch=mindmaps)](https://github.com/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/actions/workflows/deploy-mindmaps.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-222222?logo=githubpages&logoColor=white)](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/)
+[![Último commit](https://img.shields.io/github/last-commit/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data?label=%C3%BAltimo%20commit)](https://github.com/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/commits)
+[![Tamanho do repositório](https://img.shields.io/github/repo-size/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data?label=tamanho)](https://github.com/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data)
+[![Stars](https://img.shields.io/github/stars/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data?style=flat&logo=github)](https://github.com/Wattrelos/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/stargazers)
+
+![FATEC](https://img.shields.io/badge/FATEC-Ferraz%20de%20Vasconcelos-B20000)
+![Markdown](https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white)
+![Markmap](https://img.shields.io/badge/Markmap-mapas%20mentais-4CAF50)
+![Mermaid](https://img.shields.io/badge/Mermaid-diagramas-FF3670?logo=mermaid&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white)
+
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
+![Apache Cassandra](https://img.shields.io/badge/Apache%20Cassandra-1287B1?logo=apachecassandra&logoColor=white)
+![NoSQL](https://img.shields.io/badge/NoSQL-Big%20Data-6A1B9A)
+
+</div>
 
 > O mapa mental foi elaborado, estruturado e consolidado no arquivo [Mapas mentais](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/) no formato **Markmap**.
 > 📖 Confira também o tutorial completo: [Como gerar e publicar Mapas Mentais com IA e GitHub Actions](/gerando-mapas-mentais.md).
 
+---
+
+## 🗺️ Mapas Mentais Disponíveis
+
+| Mapa | Conteúdo | Versão online |
+|---|---|---|
+| 🧭 [topicos.md](/mapas-mentais/topicos.md) | Visão geral da disciplina (módulos 1 a 4) | [Abrir](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/topicos.html) |
+| 🟥 [Redis-comandos.md](/mapas-mentais/Redis-comandos.md) | Conceitos, estruturas de dados e comandos do Redis | [Abrir](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/Redis-comandos.html) |
+| 👁️ [cassandra.md](/mapas-mentais/cassandra.md) | Arquitetura, modelagem, CQL e `nodetool` do Cassandra | [Abrir](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/cassandra.html) |
+| 📚 [revisao.001.md](/mapas-mentais/revisao.001.md) | Revisão de conteúdo e questões de prova | [Abrir](https://wattrelos.github.io/FATEC-FV_Topicos-em-Banco-de-Dados-e-Big-Data/revisao.001.html) |
+
+## 📄 Documentos de Aplicações Práticas
+
+| Documento | Conteúdo |
+|---|---|
+| 🟥 [Redis-applications.md](/Redis-applications.md) | Cache, rate limiting, filas, rankings, Pub/Sub, idempotência e sessões, com comandos de exemplo |
+| 👁️ [Cassandra-applications.md](/Cassandra-applications.md) | Séries temporais, chats, feeds, logs, fraude, contadores, LWT e multi-região, com exemplos em CQL |
+
+---
+
 ### 🌟 O que foi organizado e integrado:
 
 1. **Configuração Markmap Otimizada (Frontmatter)**:
-   - `initialExpandLevel: 2`: O mapa mental abre inicialmente focado nos 4 módulos principais, permitindo uma navegação interativa sem poluição visual.
+   - `initialExpandLevel: 2`: O mapa mental abre inicialmente focado nos módulos principais, permitindo uma navegação interativa sem poluição visual.
    - `colorFreezeLevel: 2`: Mantém uma paleta de cores consistente por módulo.
    - `maxWidth: 380`: Limita a largura dos nós para manter o diagrama compacto e legível.
 
@@ -42,6 +81,49 @@
    - **Operadores de Consulta**: Comparação (`$gt`, `$gte`, `$lt`, `$lte`, `$eq`, `$ne`, `$in`, `$nin`) e Lógicos (`$and`, `$or`, `$not`, `$nor`).
    - **Modelagem de Dados**: Documentos Embutidos (desnormalização, limite de 16MB) vs. Referências (normalização com `$lookup`).
    - **Validação de Esquema e Ferramentas**: Document Validator (`$jsonSchema`, `required`, `bsonType`), MongoDB Compass e MongoDB Atlas.
+
+6. **Módulo 5: Redis (Chave-Valor em Memória)**:
+   - **Conceitos**: armazenamento em RAM, execução single-threaded (comandos atômicos), TTL e persistência **RDB** / **AOF**.
+   - **Estruturas de Dados**: Strings, Hashes, Lists, Sets, Sorted Sets, Streams, Bitmaps, HyperLogLog e Geoespacial.
+   - **Recursos Avançados**: Pub/Sub, transações (`MULTI`/`EXEC`/`WATCH`), scripts Lua e administração (`INFO`, `CONFIG`, `maxmemory-policy`).
+   - **Aplicações**: cache-aside, rate limiting, filas de background jobs, leaderboards, chat, idempotência (`SET NX EX`) e gerenciamento de sessões.
+
+7. **Módulo 6: Apache Cassandra (Wide-Column Distribuído)**:
+   - **Arquitetura**: anel *masterless*, particionador Murmur3, vnodes, Gossip, Snitch, Hinted Handoff e Read Repair.
+   - **Caminho da Escrita**: Commit Log, Memtable, SSTables, compactação (STCS, LCS, TWCS, UCS) e tombstones.
+   - **Replicação e Consistência**: Replication Factor, `NetworkTopologyStrategy` e níveis ajustáveis (`ONE`, `QUORUM`, `LOCAL_QUORUM`, `ALL`) com a regra `R + W > RF`.
+   - **Modelagem e CQL**: partition key, clustering columns, buckets, desnormalização, TTL, coleções, counters, LWT, batches, índices SAI e `nodetool`.
+   - **Aplicações**: séries temporais/IoT, histórico de chat, feeds sociais, auditoria, antifraude, rastreamento e alta disponibilidade multi-região.
+
+---
+
+## 📁 Estrutura do Repositório
+
+```
+.
+├── .github/workflows/
+│   └── deploy-mindmaps.yml      # Compila os mapas e publica no GitHub Pages
+├── mapas-mentais/               # Mapas mentais no formato Markmap
+│   ├── topicos.md
+│   ├── Redis-comandos.md
+│   ├── cassandra.md
+│   └── revisao.001.md
+├── diagrams/                    # Fontes dos diagramas Mermaid (.mmd)
+├── img/                         # Diagramas renderizados (PNG)
+├── Redis-applications.md        # Aplicações práticas do Redis
+├── Cassandra-applications.md    # Aplicações práticas do Cassandra
+└── gerando-mapas-mentais.md     # Tutorial: NotebookLM + Markmap + GitHub Pages
+```
+
+## 🛠️ Como Usar Localmente
+
+```bash
+# Visualizar um mapa mental no navegador
+npx -y markmap-cli mapas-mentais/cassandra.md
+
+# Renderizar um diagrama Mermaid em PNG
+npx -y @mermaid-js/mermaid-cli -i diagrams/cassandra-uses.mmd -o img/Cassandra-uses-example.png -b white -s 2
+```
 
 ---
 💡 *Você pode visualizar o mapa interativo abrindo o arquivo [topicos.md](/mapas-mentais/topicos.md) e utilizando a extensão Markmap do seu editor.*
